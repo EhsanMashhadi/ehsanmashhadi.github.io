@@ -1,0 +1,206 @@
+/* ===== Reset ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ul { list-style: none; }
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, sans-serif;
+  background: #f0f0f2;
+  color: #3c3c4a;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+/* ===== Wrapper (centers card like rcd.io) ===== */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2.5rem;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #ffffff;
+  box-shadow: 0 0.875rem 1.5rem rgba(32,46,66,0.06);
+  max-width: 36rem;
+  width: 100%;
+  padding: 3.5rem 2.5rem;
+}
+
+/* ===== Hero (compact two-column) ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Avatar */
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: #f0f0f2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+/* Name */
+h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* Subtitle */
+h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #3c3c4a;
+  margin-top: 0.2rem;
+}
+
+h2 a {
+  color: #3c3c4a;
+  text-decoration: underline;
+  text-decoration-color: #d0d0d8;
+  text-underline-offset: 2px;
+}
+h2 a:hover {
+  color: #1a1a2e;
+  text-decoration-color: #3c3c4a;
+}
+
+/* Icons row */
+.icons {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  color: #9c9caa;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.icons a:hover {
+  color: #3c3c4a;
+  transform: scale(1.15);
+}
+
+.icons svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* ===== Intro ===== */
+.intro {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #4a4a5a;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+/* ===== Dividers ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: #e8e8ec;
+  margin: 1.75rem 0;
+}
+
+/* ===== Sections ===== */
+section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.9rem;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+  font-size: 0.85rem;
+  color: #3c3c4a;
+  line-height: 1.55;
+}
+
+.entry a {
+  text-decoration: underline;
+  text-decoration-color: #d0d0d8;
+  text-underline-offset: 2px;
+}
+
+.entry a:hover {
+  color: #1a1a2e;
+  text-decoration-color: #3c3c4a;
+}
+
+.meta {
+  font-size: 0.75rem;
+  color: #7c7c8a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.rating-star {
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 580px) {
+  .wrapper {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .card {
+    box-shadow: none;
+    padding: 2.5rem 1.5rem;
+    max-width: 100%;
+  }
+
+  .entry {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.6rem 0;
+  }
+}
